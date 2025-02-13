@@ -56,16 +56,17 @@ public class GatewayDeviceApp
 	 */
 	public static void main(String[] args)
 	{
+		System.out.println("Main method started..."); // Debugging output
+	
 		GatewayDeviceApp gwApp = new GatewayDeviceApp(args);
-		
 		gwApp.startApp();
-		
+	
 		try {
 			Thread.sleep(DEFAULT_TEST_RUNTIME);
 		} catch (InterruptedException e) {
-			// ignore
+			System.out.println("Interrupted Exception occurred.");
 		}
-		
+	
 		gwApp.stopApp(0);
 	}
 	
